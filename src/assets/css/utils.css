@@ -1,0 +1,30 @@
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+.btn {
+    font-size: 18px;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.btn a {
+    color: var(--white);
+    text-decoration: none;
+}
+.btn:hover {
+    box-shadow: 0 0 4px 2px var(--color-box-shadow);
+}
+.btn-secondary {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+    color: var(--white);
+    border: var(--secondary);
+}
+.btn-tertiary {
+    background-color: var(--tertiary);
+    border-color: var(--tertiary);
+    color: var(--white);
+    border: var(--tertiary);
+}

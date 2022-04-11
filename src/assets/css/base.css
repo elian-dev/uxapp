@@ -1,0 +1,120 @@
+/* color palette from <https://github.com/vuejs/theme> */
+@import url('@/assets/css/utils.css'); 
+
+:root {
+    --white: #ffffff;
+    --white-soft: #f8f8f8;
+    --white-mute: #f2f2f2;
+  
+    --vt-c-black: #181818;
+    --vt-c-black-soft: #222222;
+    --vt-c-black-mute: #282828;
+  
+    --vt-c-indigo: #2c3e50;
+  
+    --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
+    --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
+    --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+    --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+  
+    --vt-c-text-light-1: var(--vt-c-indigo);
+    --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
+    --vt-c-text-dark-1: var(--vt-c-white);
+    --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+
+    /*light styles*/
+    --bg: #E5E5E5;
+    --bg-card: #FFFFFF;
+    --bg-card-mute: rgba(242, 237, 237, 0.23);
+    --border: #737789;
+    --title: #8B89F0;
+    --text: #737789;
+    --primary: #BD2B17;
+    --secondary: #8B89F0;
+    --tertiary: #737789;
+    --bg-input: #F2F4F9;
+    --danger: #EF8282;
+    --box-shadow: #d0d0d0;
+
+    /*dark styles*/
+    --d-bg: #192229;
+    --d-bg-card: #212E36;
+    --d-bg-card-mute: #737789;
+    --d-border: #2A3B47;
+    --d-title: #C8CDD0;
+    --d-text: #C8CDD0;
+    --d-primary: #BD2B17;
+    --d-secondary: #8B89F0;
+    --d-tertiary: #737789;
+    --d-bg-input: #F2F4F9;
+    --d-danger: #EF8282;
+    --d-box-shadow: none;
+  }
+  
+  /* semantic color variables for this project */
+  :root {
+    --color-background: var(--bg);
+    --color-background-card: var(--bg-card);
+    --color-background-mute: var(--bg);
+    --color-box-shadow: var(--box-shadow);
+
+    --color-border: var(--border);
+  
+    --color-heading: var(--title);
+    --color-text: var(--text);
+  
+    --section-gap: 160px;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-background: var(--d-bg);
+      --color-background-card: var(--d-bg-card);
+      --color-background-mute: var(--d-bg);
+      --color-box-shadow: var(--d-box-shadow);
+    
+      --color-border: var(--d-border);
+    
+      --color-heading: var(--d-title);
+      --color-text: var(--d-text);
+    
+      --section-gap: 160px;
+    }
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    position: relative;
+    font-weight: normal;
+  }
+  
+  body {
+    min-height: 100vh;
+    color: var(--color-text);
+    background: var(--color-background);
+    transition: color 0.5s, background-color 0.5s;
+    line-height: 1.6;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+      Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-heading);
+  }
+  
+  p {
+    color: var(--text);
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: calc(100vh - 50px);
+  }
