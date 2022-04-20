@@ -6,12 +6,12 @@
         </div>
 
         <div class="card-body">
-            <slot></slot>
+             <slot name="body"></slot>
         </div>
 
         <div class="card-footer">
-            <button class="btn btn-tertiary"><router-link to="/">Config</router-link></button>
-            <button class="btn btn-secondary"><router-link to="/">View</router-link></button>
+            <button class="btn btn-tertiary"><router-link :to="linkConfig" >config</router-link></button>
+            <button class="btn btn-primary"><router-link :to="linkView" >view</router-link></button>
         </div>
         
     </div>
@@ -19,11 +19,19 @@
 
 <script>
     export default {
-        name: 'Card',
+        name: 'CardLayout',
         props: {
             title: {
                 type: String,
                 default: 'Card'
+            },
+            linkConfig: {
+                type: String,
+                default: '/'
+            },
+            linkView: {
+                type: String,
+                default: '/'
             },
             active: {
                 type: Boolean,

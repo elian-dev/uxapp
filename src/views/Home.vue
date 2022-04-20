@@ -1,29 +1,17 @@
 <template>
     <div class="body">
         <div class="container">
-            <Card title="UTMS TOOL">
-                <ul>
-                    <li>Clean utms from trello</li>
-                    <li>Manage utms by day</li>
-                    <li>Get utms information</li>
-                </ul>
-            </Card>
+            <CardLayout title="UTMS TOOL" link-config="/utms-config" link-view="/utms-view">
+                
+                <template v-slot:body>
+                    <ul>
+                        <li>Clean utms from trello</li>
+                        <li>Manage utms by day</li>
+                        <li>Get utms information</li>
+                    </ul>
+                </template>
 
-            <Card title="MENU TOOL">
-                <ul>
-                    <li>Manage the main menu</li>
-                    <li>Automatization deploys</li>
-                </ul>
-            </Card>
-            
-            <Card title="TEMPLATES TOOL">
-                <ul>
-                    <li>Manage the templates</li>
-                    <li>Automatization deploys</li>
-                </ul>
-            </Card>
-
-            <Card title="AGREGAR OTRA" active="false"></Card>
+            </CardLayout>
 
         </div>
 
@@ -31,13 +19,15 @@
 </template>
 
 <script>
-    import Card from '@/views/Card.vue'
+    import CardLayout from '@/views/CardLayout.vue'
+
     export default {
         name: 'Home',
         components: {
-            Card
+            CardLayout
         }
     }
+
 </script>
 
 <style>

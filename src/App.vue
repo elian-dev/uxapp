@@ -10,17 +10,22 @@
 
 <script>
   import Header from '@/views/Header.vue'
-  import Card from '@/views/Card.vue'
 
   export default {
     name: 'App',
     components: {
       Header,
-      Card
     }
   }
 </script>
 
 <style>
   @import url('@/assets/css/base.css');
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 50px);
+  }
+
 </style>

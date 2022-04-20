@@ -4,3 +4,6 @@
         <p>This is the UTMs tool component.</p>
     </div>
 </template>
+<script setup>
+    
+</script>
